@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中文科奧義傳承：語文知識大冒險</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: 旺角字體/Mali/Noto Sans TC -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .anime-title {
+            font-family: 'Zhi Mang Xing', cursive;
+            text-shadow: 3px 3px 0px #ef4444, 6px 6px 0px #3b82f6;
+        }
+        .comic-card {
+            border: 3px solid #1e293b;
+            box-shadow: 4px 4px 0px #3b82f6;
+            transition: all 0.2s ease;
+        }
+        .comic-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px #ef4444;
+        }
+        .comic-btn {
+            border: 3px solid #000;
+            box-shadow: 3px 3px 0px #000;
+            font-weight: 900;
+            transition: all 0.1s ease;
+        }
+        .comic-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px #000;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-950 to-purple-950 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <!-- 頁首 -->
+        <header class="text-center mb-8">
+            <div class="inline-block bg-yellow-400 text-black font-black px-4 py-1 rounded-full text-sm mb-2 transform -rotate-2 border-2 border-black shadow-[2px_2px_0px_#000]">
+                ⚡ 語文知識應試必備・動漫特訓版 ⚡
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black text-white anime-title tracking-wider mb-2">中文科・奧義傳承</h1>
+            <p class="text-cyan-300 text-sm md:text-base font-bold">掌握三大核心技能，擊退所有考試難關！</p>
+        </header>
+
+        <!-- 導航按鈕 -->
+        <div class="flex justify-center gap-2 md:gap-4 mb-8">
+            <button onclick="switchTab('notes')" id="btn-notes" class="comic-btn bg-cyan-400 text-black px-4 py-2 rounded-lg text-sm md:text-base">📜 奧義筆記</button>
+            <button onclick="switchTab('quiz')" id="btn-quiz" class="comic-btn bg-amber-400 text-black px-4 py-2 rounded-lg text-sm md:text-base">⚔️ 實戰試煉</button>
+            <button onclick="switchTab('formula')" id="btn-formula" class="comic-btn bg-pink-400 text-black px-4 py-2 rounded-lg text-sm md:text-base">🛡️ 必殺公式</button>
+        </div>
+
+        <!-- 內容區塊：奧義筆記 -->
+        <div id="tab-notes" class="space-y-6">
+            <!-- 一、敘事手法 -->
+            <div class="bg-slate-800/80 backdrop-blur rounded-xl p-6 comic-card border-l-8 border-cyan-400">
+                <h2 class="text-2xl font-black text-cyan-300 mb-4 flex items-center gap-2">
+                    <span>📖</span> 一、敘事手法 (記敘順序)
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-slate-900 p-4 rounded-lg border-2 border-slate-700">
+                        <span class="bg-cyan-500 text-black px-2 py-0.5 rounded text-xs font-bold">順敘</span>
+                        <h3 class="font-bold text-lg mt-2 text-white">按時間先後</h3>
+                        <p class="text-sm text-slate-300 mt-1">按照事件發生的時間先後順序來記敘情節。</p>
+                        <div class="mt-3 pt-3 border-t border-slate-800 text-xs text-yellow-400 font-bold">
+                            💡 好處：脈絡清晰，條理分明，讀者容易掌握來龍去脈。
+                        </div>
+                    </div>
+                    <div class="bg-slate-900 p-4 rounded-lg border-2 border-slate-700">
+                        <span class="bg-amber-500 text-black px-2 py-0.5 rounded text-xs font-bold">倒敘</span>
+                        <h3 class="font-bold text-lg mt-2 text-white">結局放最前</h3>
+                        <p class="text-sm text-slate-300 mt-1">把結局或突出片段提到最前，再按時間順序講述過程。</p>
+                        <div class="mt-3 pt-3 border-t border-slate-800 text-xs text-yellow-400 font-bold">
+                            💡 好處：製造懸念，吸引閱讀興趣；突出重點，文章波瀾起伏。
+                        </div>
+                    </div>
+                    <div class="bg-slate-900 p-4 rounded-lg border-2 border-slate-700">
+                        <span class="bg-purple-500 text-black px-2 py-0.5 rounded text-xs font-bold">插敘</span>
+                        <h3 class="font-bold text-lg mt-2 text-white">中斷插入片段</h3>
+                        <p class="text-sm text-slate-300 mt-1">在主線中暫時中斷，插入與主線相關片段後再繼續原線。</p>
+                        <div class="mt-3 pt-3 border-t border-slate-800 text-xs text-yellow-400 font-bold">
+                            💡 好處：豐富內容，補充背景/原因，令情節更完整、人物更豐滿。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 二、常見修辭手法 -->
+            <div class="bg-slate-800/80 backdrop-blur rounded-xl p-6 comic-card border-l-8 border-amber-400">
+                <h2 class="text-2xl font-black text-amber-300 mb-4 flex items-center gap-2">
+                    <span>✨</span> 二、常見修辭手法
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-slate-900 p-4 rounded-lg border-2 border-slate-700">
+                        <span class="bg-amber-400 text-black px-2 py-0.5 rounded text-xs font-bold">比喻</span>
+                        <p class="text-sm text-slate-300 mt-2">用相似點的乙事物描寫甲事物（明喻/暗喻/借喻）。</p>
+                        <p class="text-xs text-yellow-400 font-bold mt-2">💡 生動形象、具體可感，化深奧為淺顯。</p>
+                    </div>
+                    <div class="bg-slate-900 p-4 rounded-lg border-2 border-slate-700">
+                        <span class="bg-amber-400 text-black px-2 py-0.5 rounded text-xs font-bold">擬人</span>
+                        <p class="text-sm text-slate-300 mt-2">把事物當作人來寫，賦予思想、情感或動作。</p>
+                        <p class="text-xs text-yellow-400 font-bold mt-2">💡 增強生動性與趣味性，表達強烈感情。</p>
+                    </div>
+                    <div class="bg-slate-900 p-4 rounded-lg border-2 border-slate-700">
+                        <span class="bg-amber-400 text-black px-2 py-0.5 rounded text-xs font-bold">排比</span>
+                        <p class="text-sm text-slate-300 mt-2">三個或以上結構相同/相似、意思相關的句子排列。</p>
+                        <p class="text-xs text-yellow-400 font-bold mt-2">💡 加強語氣、氣勢，條理分明，強化情感。</p>
+                    </div>
+                    <div class="bg-slate-900 p-4 rounded-lg border-2 border-slate-700">
+                        <span class="bg-amber-400 text-black px-2 py-0.5 rounded text-xs font-bold">誇張</span>
+                        <p class="text-sm text-slate-300 mt-2">對形象、特徵、作用進行合理放大或縮小描寫。</p>
+                        <p class="text-xs text-yellow-400 font-bold mt-2">💡 突出本質特徵，留低深刻鮮明印象。</p>
+                    </div>
+                    <div class="bg-slate-900 p-4 rounded-lg border-2 border-slate-700">
+                        <span class="bg-amber-400 text-black px-2 py-0.5 rounded text-xs font-bold">設問</span>
+                        <p class="text-sm text-slate-300 mt-2">明知故問，自問自答。</p>
+                        <p class="text-xs text-yellow-400 font-bold mt-2">💡 引起注意與思考，承上啟下，層次分明。</p>
+                    </div>
+                    <div class="bg-slate-900 p-4 rounded-lg border-2 border-slate-700">
+                        <span class="bg-amber-400 text-black px-2 py-0.5 rounded text-xs font-bold">反問</span>
+                        <p class="text-sm text-slate-300 mt-2">無疑問而問，解答盡在問句中（只問不答）。</p>
+                        <p class="text-xs text-yellow-400 font-bold mt-2">💡 加強肯定語氣，激發感情，增強說服力。</p>
+                    </div>
+                    <div class="bg-slate-900 p-4 rounded-lg border-2 border-slate-700">
+                        <span class="bg-amber-400 text-black px-2 py-0.5 rounded text-xs font-bold">對偶</span>
+                        <p class="text-sm text-slate-300 mt-2">字數相等、結構相同、意義相對或相關的兩句式。</p>
+                        <p class="text-xs text-yellow-400 font-bold mt-2">💡 形式整齊、對稱、音韻諧調，琅琅上口。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 三、說明順序 -->
+            <div class="bg-slate-800/80 backdrop-blur rounded-xl p-6 comic-card border-l-8 border-pink-400">
+                <h2 class="text-2xl font-black text-pink-300 mb-4 flex items-center gap-2">
+                    <span>🧭</span> 三、說明順序
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-slate-900 p-4 rounded-lg border-2 border-slate-700">
+                        <span class="bg-pink-500 text-black px-2 py-0.5 rounded text-xs font-bold">空間順序</span>
+                        <p class="text-sm text-slate-300 mt-2">顯出事物、建築名稱或方位詞（如：從上到下、左到右）。</p>
+                        <div class="mt-3 pt-3 border-t border-slate-800 text-xs text-yellow-400 font-bold">
+                            💡 標準寫法：能多角度、更具體/完整地說明 [對象] 的結構與位置/格局。
+                        </div>
+                    </div>
+                    <div class="bg-slate-900 p-4 rounded-lg border-2 border-slate-700">
+                        <span class="bg-pink-500 text-black px-2 py-0.5 rounded text-xs font-bold">時間順序</span>
+                        <p class="text-sm text-slate-300 mt-2">顯出時間詞（按時間先後、年代或季節演變）。</p>
+                        <div class="mt-3 pt-3 border-t border-slate-800 text-xs text-yellow-400 font-bold">
+                            💡 標準寫法：能清晰呈現 [對象] 的發展經過 / 演變過程，條理分明。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 內容區塊：實戰試煉 (Quiz) -->
+        <div id="tab-quiz" class="hidden space-y-6">
+            <div class="bg-slate-800/80 backdrop-blur rounded-xl p-6 comic-card border-2 border-amber-400">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-black text-amber-300">⚔️ 知識力大考驗</h2>
+                    <span id="score-board" class="bg-amber-400 text-black font-black px-3 py-1 rounded-full text-sm">得分: 0 / 5</span>
+                </div>
+                
+                <div id="quiz-container" class="space-y-4">
+                    <!-- 題目由 JS 動態生成 -->
+                </div>
+                
+                <div id="quiz-result" class="mt-6 text-center hidden">
+                    <h3 id="result-title" class="text-2xl font-black text-yellow-400 mb-2">🎉 恭喜通關！</h3>
+                    <p id="result-desc" class="text-slate-300 mb-4">你已經獲得了「語文大師」的稱號！</p>
+                    <button onclick="restartQuiz()" class="comic-btn bg-cyan-400 text-black px-6 py-2 rounded-lg font-bold">再挑戰一次 🚀</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 內容區塊：必殺公式 -->
+        <div id="tab-formula" class="hidden space-y-6">
+            <div class="bg-slate-800/80 backdrop-blur rounded-xl p-6 comic-card border-2 border-pink-400">
+                <h2 class="text-2xl font-black text-pink-300 mb-4">🛡️ 考試必殺答題公式</h2>
+                <p class="text-sm text-slate-300 mb-6">考試遇到問「好處」時，直接套用以下神裝公式，拿滿高分！</p>
+
+                <div class="space-y-6">
+                    <div class="bg-slate-900 p-5 rounded-lg border-2 border-slate-700">
+                        <div class="text-cyan-400 font-bold text-sm mb-1">公式一：插敘好處問答</div>
+                        <div class="bg-slate-950 p-4 rounded text-white font-mono text-sm border border-slate-800">
+                            「本文第 <span class="text-yellow-400">X</span> 段運用了<span class="text-cyan-300 font-bold">插敘</span>，好處是豐富文章內容，更具體地表現出/說明『結合文章內容，如：<span class="text-pink-400">作者對寵物的悉心照料 / 媽媽的態度轉變</span>』。」
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900 p-5 rounded-lg border-2 border-slate-700">
+                        <div class="text-pink-400 font-bold text-sm mb-1">公式二：空間說明順序問答</div>
+                        <div class="bg-slate-950 p-4 rounded text-white font-mono text-sm border border-slate-800">
+                            「本文運用了<span class="text-pink-300 font-bold">空間順序</span>，好處是能更完整、具體地說明『說明對象，如：<span class="text-cyan-400">機場一號客運大樓 / 大樓</span>』的結構與位置。」
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 切換頁籤
+        function switchTab(tabName) {
+            document.getElementById('tab-notes').classList.add('hidden');
+            document.getElementById('tab-quiz').classList.add('hidden');
+            document.getElementById('tab-formula').classList.add('hidden');
+            
+            document.getElementById('btn-notes').className = 'comic-btn bg-slate-700 text-white px-4 py-2 rounded-lg text-sm md:text-base';
+            document.getElementById('btn-quiz').className = 'comic-btn bg-slate-700 text-white px-4 py-2 rounded-lg text-sm md:text-base';
+            document.getElementById('btn-formula').className = 'comic-btn bg-slate-700 text-white px-4 py-2 rounded-lg text-sm md:text-base';
+
+            if (tabName === 'notes') {
+                document.getElementById('tab-notes').classList.remove('hidden');
+                document.getElementById('btn-notes').className = 'comic-btn bg-cyan-400 text-black px-4 py-2 rounded-lg text-sm md:text-base';
+            } else if (tabName === 'quiz') {
+                document.getElementById('tab-quiz').classList.remove('hidden');
+                document.getElementById('btn-quiz').className = 'comic-btn bg-amber-400 text-black px-4 py-2 rounded-lg text-sm md:text-base';
+                loadQuiz();
+            } else if (tabName === 'formula') {
+                document.getElementById('tab-formula').classList.remove('hidden');
+                document.getElementById('btn-formula').className = 'comic-btn bg-pink-400 text-black px-4 py-2 rounded-lg text-sm md:text-base';
+            }
+        }
+
+        // 問答題庫
+        const quizData = [
+            {
+                q: "文章把故事的結局提到最前講述，然後才順著時間敘述過程，這是甚麼敘事手法？",
+                options: ["順敘", "倒敘", "插敘", "補敘"],
+                answer: 1
+            },
+            {
+                q: "「明知故問，自問自答。」這是甚麼修辭手法？",
+                options: ["設問", "反問", "比喻", "擬人"],
+                answer: 0
+            },
+            {
+                q: "描述建築物時使用「從上到下」、「左到右」等方位詞，屬於甚麼順序？",
+                options: ["時間順序", "空間順序", "邏輯順序", "發展順序"],
+                answer: 1
+            },
+            {
+                q: "「把事物當作人來寫，賦予人的思想、情感或動作。」這是甚麼修辭手法？",
+                options: ["比喻", "誇張", "擬人", "對偶"],
+                answer: 2
+            },
+            {
+                q: "在主線記敘中暫時中斷，插入相關片段後再繼續原線，其主要好處是甚麼？",
+                options: ["製造懸念吸引讀者", "豐富文章內容，使人物形象更豐滿", "加強語氣與氣勢", "令讀者琅琅上口"],
+                answer: 1
+            }
+        ];
+
+        let currentQ = 0;
+        let score = 0;
+
+        function loadQuiz() {
+            currentQ = 0;
+            score = 0;
+            document.getElementById('quiz-result').classList.add('hidden');
+            document.getElementById('score-board').innerText = `得分: 0 / ${quizData.length}`;
+            renderQuestion();
+        }
+
+        function renderQuestion() {
+            if (currentQ >= quizData.length) {
+                document.getElementById('quiz-container').innerHTML = '';
+                document.getElementById('quiz-result').classList.remove('hidden');
+                document.getElementById('result-title').innerText = score === quizData.length ? "👑 完美滿分！超神！" : "🌟 挑戰完成！";
+                document.getElementById('result-desc').innerText = `你答對了 ${score} 題，繼續保持！`;
+                return;
+            }
+
+            const q = quizData[currentQ];
+            let html = `
+                <div class="mb-4">
+                    <span class="text-xs bg-slate-700 text-cyan-300 px-2 py-1 rounded font-bold">第 ${currentQ + 1} 題 / 共 ${quizData.length} 題</span>
+                    <h3 class="text-lg font-bold text-white mt-2">${q.q}</h3>
+                </div>
+                <div class="space-y-2">
+            `;
+
+            q.options.forEach((opt, index) => {
+                html += `<button onclick="checkAnswer(${index})" class="w-full text-left bg-slate-900 hover:bg-slate-700 p-3 rounded-lg border-2 border-slate-700 text-white font-medium transition">${index + 1}. ${opt}</button>`;
+            });
+
+            html += `</div>`;
+            document.getElementById('quiz-container').innerHTML = html;
+        }
+
+        function checkAnswer(selected) {
+            const q = quizData[currentQ];
+            if (selected === q.answer) {
+                score++;
+                alert("🎉 答對了！太厲害喇！");
+            } else {
+                alert(`❌ 答錯喇！正確答案是：${q.options[q.answer]}`);
+            }
+            currentQ++;
+            document.getElementById('score-board').innerText = `得分: ${score} / ${quizData.length}`;
+            renderQuestion();
+        }
+
+        function restartQuiz() {
+            loadQuiz();
+        }
+    </script>
+</body>
+</html>
